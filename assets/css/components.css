@@ -1,0 +1,213 @@
+/* Trust / stars */
+.stars {
+	display: flex;
+	align-items: center;
+	gap: 0.6rem;
+	margin: var(--space-2) 0;
+}
+
+.stars__icons {
+	color: var(--color-accent);
+	font-size: 1.3rem;
+	letter-spacing: 0.15em;
+}
+
+.stars__label {
+	font-weight: 600;
+	color: var(--color-muted);
+}
+
+/* How-it-works steps */
+.steps-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: var(--space-3);
+	margin-block: var(--space-4);
+}
+
+.steps-grid--detailed {
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.step-card {
+	background: #fff;
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius);
+	padding: var(--space-3);
+}
+
+.step-card__number {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+	background: var(--color-primary);
+	color: #fff;
+	font-weight: 800;
+	font-size: 1.25rem;
+	margin-bottom: var(--space-2);
+}
+
+/* Pricing preview cards */
+.price-grid {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: var(--space-2);
+	margin-block: var(--space-3);
+}
+
+.price-card {
+	background: #fff;
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius);
+	padding: var(--space-3);
+	text-align: center;
+}
+
+.price-card__label {
+	display: block;
+	color: var(--color-muted);
+	font-weight: 600;
+	margin-bottom: 0.5rem;
+}
+
+.price-card__amount {
+	display: block;
+	font-size: 1.75rem;
+	font-weight: 800;
+	color: var(--color-primary);
+}
+
+.price-note {
+	color: var(--color-muted);
+	margin-top: var(--space-2);
+}
+
+/* Full price table */
+.price-table-wrap {
+	overflow-x: auto;
+}
+
+.price-table {
+	width: 100%;
+	border-collapse: collapse;
+	background: #fff;
+}
+
+.price-table th,
+.price-table td {
+	padding: 1rem 1.25rem;
+	text-align: left;
+	border-bottom: 1px solid var(--color-border);
+	font-size: 1.05rem;
+}
+
+.price-table th {
+	background: var(--color-primary);
+	color: #fff;
+}
+
+.price-table tr:last-child td {
+	border-bottom: none;
+}
+
+/* Value propositions */
+.value-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: var(--space-3);
+	margin-top: var(--space-3);
+}
+
+.value-card {
+	background: #fff;
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius);
+	padding: var(--space-3);
+}
+
+/* Info lists */
+.info-list {
+	padding-left: 1.25rem;
+	list-style: disc;
+}
+
+.info-list li {
+	margin-bottom: var(--space-2);
+}
+
+/* FAQ accordion */
+.faq-list {
+	max-width: 760px;
+}
+
+.faq-item {
+	border-bottom: 1px solid var(--color-border);
+}
+
+.faq-item__question {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: var(--space-2);
+	background: none;
+	border: none;
+	padding: var(--space-2) 0;
+	font-size: 1.1rem;
+	font-weight: 600;
+	text-align: left;
+	color: var(--color-text);
+	cursor: pointer;
+}
+
+.faq-item__icon {
+	font-size: 1.5rem;
+	color: var(--color-accent);
+	flex-shrink: 0;
+}
+
+.faq-item__answer {
+	padding-bottom: var(--space-2);
+	color: var(--color-muted);
+	max-width: 65ch;
+}
+
+/* Final CTA band */
+.final-cta {
+	background: var(--color-primary);
+	color: #fff;
+	text-align: center;
+}
+
+.final-cta__inner h2 {
+	color: #fff;
+}
+
+.final-cta .btn--primary {
+	margin-top: var(--space-2);
+}
+
+/* Responsive grids */
+@media (max-width: 900px) {
+	.steps-grid,
+	.steps-grid--detailed,
+	.value-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.price-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 560px) {
+	.steps-grid,
+	.steps-grid--detailed,
+	.value-grid,
+	.price-grid {
+		grid-template-columns: 1fr;
+	}
+}
